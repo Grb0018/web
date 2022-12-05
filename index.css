@@ -1,0 +1,435 @@
+:root{
+    --font1: 'Playfair Display', serif;
+    --font2:  'Lato', sans-serif;
+    --font3: 'Rimouski SemiBold'
+}
+@font-face {
+    font-family: 'Rimouski SemiBold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rimouski SemiBold'), url('rimouski sb.woff') format('woff');
+    }
+body{
+    background-color: #01082e;
+    font-family: var(--font2);
+    user-select: none;
+    -webkit-user-drag: none;
+    overflow: hidden;
+}
+.navbar{
+    display: none;
+}
+.navbar-custom {
+    background-color: #00127a;
+    border:0;border-radius: 0;
+    font-family: var(--font3);
+    color:rgb(0, 31, 131);
+}
+.navbar-inverse .navbar-brand {
+    color: #00127a;
+    font-family: var(--font2);
+}
+.cloud2{
+    position: fixed;
+    width: 53vw;
+    left: 45vw;
+    bottom: -3vw;
+    filter: drop-shadow(2px 4px 6px grey);
+    transition: 0.5s;
+}
+.cloud1{
+    position: fixed;
+    width: 60vw;
+    bottom: -5vw;
+    left: -19vw;
+    filter: drop-shadow(2px 4px 6px grey);
+    transition: 0.5s;
+}
+.cloud3{
+    position: fixed;
+    width: 52vw;
+    bottom: -3.5vw;
+    left: 20vw;
+    filter: drop-shadow(2px 4px 6px grey);
+    transition: 0.5s;
+}
+.cloud4{
+    position: fixed;
+    width: 60vw;
+    bottom: -5vw;
+    left: 61vw;
+    filter: drop-shadow(2px 4px 6px grey);
+    transition: 0.5s;
+}
+.cloud5{
+    position: fixed;
+    width: 54vw;
+    height: 14vw;
+    z-index: -1;
+    bottom: -3vw;
+    left: 1vw;
+    filter: drop-shadow(2px 4px 6px grey);
+    transition: 0.5s;
+}
+.cloud6{
+    position: fixed;
+    width: 48vw;
+    bottom: 0vw;
+    height: 11vw;
+    z-index: -1;
+    left: 34vw;
+    filter: drop-shadow(2px 4px 6px grey);
+    transition: 0.5s;
+}
+.cloud7{
+    position: fixed;
+    width: 48vw;
+    bottom: 0vw;
+    height: 11vw;
+    z-index: -1;
+    left: 77vw;
+    filter: drop-shadow(2px 4px 6px grey);
+    transition: 0.5s;
+}
+.cloud8{
+    position: fixed;
+    width: 41vw;
+    bottom: 1vw;
+    height: 10vw;
+    z-index: -2;
+    left: 64vw;
+    filter: drop-shadow(2px 4px 6px grey);
+    transform: revert;
+    transition: 0.5s;
+}
+.cloud9{
+    position: fixed;
+    width: 45vw;
+    bottom: 1vw;
+    height: 10vw;
+    z-index: -2;
+    left: -11vw;
+    filter: drop-shadow(2px 4px 6px grey);
+    transform: revert;
+    transition: 0.5s;
+}
+.logo{
+    width: 25px;
+}
+#sc1{
+    position: absolute;
+    width: 4vw;
+    left: 34vw;
+    top: 31vw;
+    opacity: 0.9;
+    filter: drop-shadow(2px 4px 20px white);
+    animation: rotate 4s linear infinite;
+}
+#sc2{
+    position: absolute;
+    width: 4vw;
+    left: 58vw;
+    top: 28vw;
+    opacity: 0.9;
+    filter: drop-shadow(2px 4px 20px white);
+    animation: rotate 4s linear infinite;
+}
+.star{
+    position: absolute;
+    font-size: 0.6vw;
+    color: rgba(137, 249, 255, 0.885);
+}
+.star2{
+    position: absolute;
+    font-size: 0.38vw;
+    color: rgba(137, 249, 255, 0.885);
+}
+@keyframes spark{
+    0%{filter: brightness(0.5)}
+    50%{filter: brightness(1.5)}
+    100%{filter: brightness(0.5)}
+}
+#fallingStar{
+    width: 0.3vw;
+    box-shadow: 1px 20px 20px 1px #898989;
+    position: absolute;
+    left: -5vw;
+    transform: rotate(301deg);
+    animation: fs 4000ms linear;
+    border-top-left-radius: 8vw;
+}
+@keyframes fs{
+    to{transform: rotate(301deg) translateY(88vw);}
+}
+.navbar{    background-color: transparent;}
+.navbar-light .navbar-brand {
+    color: rgb(252 254 255);
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font2);
+    margin-left:2vw;
+}
+.navbar-light .navbar-brand:hover, .navbar-light .navbar-nav .nav-link:hover{
+    filter: drop-shadow(0px 5px 6px #f3f3f3a3);
+    color:aliceblue;
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgb(207 224 255 / 77%);
+    font-family: var(--font2);
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(207 224 255 / 77%);
+    font-family: var(--font2);
+}
+#planet{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 24vw;
+    height: 24vw;
+    background: rgb(56,55,85);
+    border-radius: 50%;
+    position: absolute;
+    top: 11vw;
+    z-index: 5;
+    backdrop-filter: blur(10vw);
+    left: 36vw;
+    background: radial-gradient(circle, rgb(68 65 131 / 74%) 0%, rgb(5 11 44) 86%, rgb(103 176 191 / 82%) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#383755",endColorstr="#00d4ff",GradientType=1);
+}
+#rckt1{
+    width: 2.5vw;
+    z-index: -3;
+    position: absolute;
+    top: 4vw;
+    rotate: 133deg;
+    transition: 1s;
+    transform: translateY(8vw);
+}
+#rckt2{
+    width: 2.5vw;
+    rotate: 63deg;
+    right: -3vw;
+    position: absolute;
+    transition: 1s;
+}
+#planet h1 a{
+    text-decoration: none;
+    color:#f0f8ff61;
+    font-family: var(--font2);
+    letter-spacing: 5px;
+    font-size: 15px;
+}
+.navbar-toggler {
+    font-size: 0.9rem;
+}
+.navbar-light .navbar-toggler-icon {
+    filter: invert(1);
+}
+#cloudall{display: none;}
+@keyframes clouds{
+    0%{transform: translateY(0px)}
+    50%{transform: translateY(-1vw)}
+    100%{transform: translateY(0px);}
+}
+@keyframes clouds1{
+    0%{transform: translateY(0px)}
+    50%{transform: translateY(1vw)}
+    100%{transform: translateY(0px);}
+}
+@keyframes rckt1{
+    from{transform: translateY(4vw);}
+    to{transform: translateY(-55vw);}
+}
+@keyframes rckt2{
+    to{rotate: 53deg;transform: translateY(52vw);}
+}
+@keyframes myOrbit {
+    from { transform: rotate(360deg) translateX(15vw) rotate(10deg)}
+    to   { transform: rotate(0deg) translateX(15vw) rotate(10deg) }
+}
+@keyframes myOrbit2 {
+    from { transform: rotate(0deg) translateX(18vw) rotate(10deg)}
+    to   { transform: rotate(360deg) translateX(18vw) rotate(10deg) }
+}
+@keyframes rotate{
+    0%{transform: rotate(0deg)}
+    50%{transform: rotate(360deg)}
+    100%{transform: rotate(0deg)}
+}
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: 8vw;
+    }
+    .nav-item{
+        margin-right: 2vw;
+    }
+}
+@media (max-width: 992px){
+    #planet {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 22vw;
+        height: 22vw;
+        background: rgb(56,55,85);
+        border-radius: 50%;
+        position: absolute;
+        top: 10vw;
+        left: 40vw;
+        background: radial-gradient(circle, rgb(68 65 131 / 74%) 0%, rgb(5 11 44) 86%, rgb(103 176 191 / 82%) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#383755",endColorstr="#00d4ff",GradientType=1);
+    }
+    .cloud1 {
+        position: fixed;
+        width: 56vw;
+        bottom: -5vw;
+        left: -19vw;
+        filter: drop-shadow(2px 4px 6px grey);
+        transition: 0.5s;
+    }
+    .cloud2 {
+        position: fixed;
+        width: 49vw;
+        left: 45vw;
+        bottom: -3vw;
+        filter: drop-shadow(2px 4px 6px grey);
+        transition: 0.5s;
+    }
+    .cloud3 {
+        position: fixed;
+        width: 45vw;
+        bottom: -3.5vw;
+        left: 20vw;
+        filter: drop-shadow(2px 4px 6px grey);
+        transition: 0.5s;
+    }
+    .cloud4 {
+        position: fixed;
+        width: 52vw;
+        bottom: -5vw;
+        left: 61vw;
+        filter: drop-shadow(2px 4px 6px grey);
+        transition: 0.5s;
+    }
+    .cloud5 {
+        position: fixed;
+        width: 49vw;
+        height: 14vw;
+        z-index: -1;
+        bottom: -5vw;
+        left: 1vw;
+        filter: drop-shadow(2px 4px 6px grey);
+        transition: 0.5s;
+    }
+    .cloud6 {
+        position: fixed;
+        width: 43vw;
+        bottom: -1vw;
+        height: 11vw;
+        z-index: -1;
+        left: 34vw;
+        filter: drop-shadow(2px 4px 6px grey);
+        transition: 0.5s;
+    }
+    .cloud7 {
+        position: fixed;
+        width: 44vw;
+        bottom: -2vw;
+        height: 11vw;
+        z-index: -1;
+        left: 77vw;
+        filter: drop-shadow(2px 4px 6px grey);
+        transition: 0.5s;
+    }
+    .cloud8 {
+        position: fixed;
+        width: 37vw;
+        bottom: 1vw;
+        height: 10vw;
+        z-index: -2;
+        left: 64vw;
+        filter: drop-shadow(2px 4px 6px grey);
+        transform: revert;
+        transition: 0.5s;
+    }
+    .cloud9 {
+        position: fixed;
+        width: 41vw;
+        bottom: 0vw;
+        height: 10vw;
+        z-index: -2;
+        left: -11vw;
+        filter: drop-shadow(2px 4px 6px grey);
+        transform: revert;
+        transition: 0.5s;
+    }
+    #planet h1 a{
+        font-size: 9px;
+    letter-spacing: 3px;
+    }
+}
+@media (max-width: 450px){
+    #planet {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        position: absolute;
+        top: 44vw;
+        left: 0;
+        margin: 0 18%;
+        background: radial-gradient(circle, rgb(68 65 131 / 74%) 0%, rgb(5 11 44) 86%, rgb(103 176 191 / 82%) 100%);
+    }
+    .cloud6 {
+        position: fixed;
+        width: 67vw;
+        bottom: -1vw;
+        height: 15vw;
+        z-index: -1;
+        left: 12vw;
+        filter: drop-shadow(2px 4px 6px grey);
+        transition: 0.5s;
+    }
+    .cloud9 {
+        position: fixed;
+        width: 68vw;
+        bottom: -1vw;
+        height: 20vw;
+        z-index: -2;
+        left: -32vw;
+        filter: drop-shadow(2px 4px 6px grey);
+        transform: revert;
+        transition: 0.5s;
+    }
+    .cloud1 {
+        position: fixed;
+        width: 85vw;
+        bottom: -5vw;
+        left: -11vw;
+        filter: drop-shadow(2px 4px 6px grey);
+        transition: 0.5s;
+    }
+    .cloud2 {
+        position: fixed;
+        width: 101vw;
+        left: 45vw;
+        bottom: -5vw;
+        filter: drop-shadow(2px 4px 6px grey);
+        transition: 0.5s;
+    }
+    .cloud3 {
+        position: fixed;
+        width: 91vw;
+        bottom: -4.5vw;
+        left: 20vw;
+        filter: drop-shadow(2px 4px 6px grey);
+        transition: 0.5s;
+    }
+}
