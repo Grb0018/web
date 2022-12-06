@@ -192,10 +192,10 @@ body{
     background: rgb(56,55,85);
     border-radius: 50%;
     position: absolute;
-    top: 11vw;
+    top: 10vw;
     z-index: 5;
     backdrop-filter: blur(10vw);
-    left: 36vw;
+    left: 35vw;
     background: radial-gradient(circle, rgb(68 65 131 / 74%) 0%, rgb(5 11 44) 86%, rgb(103 176 191 / 82%) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#383755",endColorstr="#00d4ff",GradientType=1);
 }
@@ -372,17 +372,45 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#383755",endCo
         font-size: 9px;
     letter-spacing: 3px;
     }
+    @keyframes myOrbit {
+        from { transform: rotate(360deg) translateX(15vw) rotate(10deg)}
+        to   { transform: rotate(0deg) translateX(15vw) rotate(10deg) }
+    }
+    @keyframes myOrbit2 {
+        from { transform: rotate(0deg) translateX(18vw) rotate(10deg)}
+        to   { transform: rotate(360deg) translateX(18vw) rotate(10deg) }
+    }
 }
 @media (max-width: 450px){
+    #fallingStar{
+        width: 1.3vw;
+        box-shadow: 1px 20px 20px 1px #898989;
+        position: absolute;
+        left: -20vw;
+        top:25vh;
+        transform: rotate(301deg);
+        animation: fs 4000ms linear;
+        border-top-left-radius: 8vw;
+    }
+    .star{
+        position: absolute;
+        font-size: 2.6vw;
+        color: rgba(137, 249, 255, 0.885);
+    }
+    .star2{
+        position: absolute;
+        font-size: 2.38vw;
+        color: rgba(137, 249, 255, 0.885);
+    }
     #planet {
         display: none;
         align-items: center;
         justify-content: center;
-        width: 250px;
-        height: 250px;
+        width: 70%;
+        height: 33%;
         border-radius: 50%;
         position: absolute;
-        top: 44vw;
+        top: 32%;
         left: 0;
         margin: 0 18%;
         background: radial-gradient(circle, rgb(68 65 131 / 74%) 0%, rgb(5 11 44) 86%, rgb(103 176 191 / 82%) 100%);
@@ -431,5 +459,30 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#383755",endCo
         left: 20vw;
         filter: drop-shadow(2px 4px 6px grey);
         transition: 0.5s;
+    }
+    #sc2{
+    width: 11vw;
+    left: 75vw;
+    top: 75%;
+    }
+    #sc1{width: 10vw;
+        left: 13vw;
+        top: 67%;}
+    #rckt1{width: 4.5%;transform: translateX(13vw);}   
+    #rckt2{width: 7.5%;right:-10vw;} 
+    @keyframes myOrbit {
+        from { transform: rotate(360deg) translateX(45vw) rotate(10deg)}
+        to   { transform: rotate(0deg) translateX(45vw) rotate(10deg) }
+    }
+    @keyframes myOrbit2 {
+        from { transform: rotate(0deg) translateX(48vw) rotate(10deg)}
+        to   { transform: rotate(360deg) translateX(48vw) rotate(10deg) }
+    }
+    @keyframes fs{
+        to{transform: rotate(301deg) translateY(188vw);}
+    }
+    @keyframes rckt1{
+        from{transform: translateY(4vw);}
+        to{transform: translateY(-55vw);}
     }
 }
