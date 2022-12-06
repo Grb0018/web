@@ -1,5 +1,7 @@
 const vw=window.innerWidth/100;
-
+window.onresize=()=>{
+    location.reload()
+}
 document.body.onload=()=>{
     $('.navbar').fadeIn(3200);
     $('.cloud1').css('animation','clouds 1300ms linear infinite')
