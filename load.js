@@ -1,4 +1,5 @@
 const vw=window.innerWidth/100;
+
 document.body.onload=()=>{
     $('.navbar').fadeIn(3200);
     $('.cloud1').css('animation','clouds 1300ms linear infinite')
@@ -14,7 +15,7 @@ document.body.onload=()=>{
         $('#rckt1').css('animation','rckt1 1s linear')
         $('#rckt2').css('animation','rckt2 1s linear')
         setTimeout(()=>{
-            if(window.innerWidth<900 && window.innerWidth>450){
+            if(window.innerWidth<900 && window.innerWidth>500){
                 $('#rckt1').css({
                     'width': '2.5vw',
                     'z-index': '-3',
@@ -28,7 +29,7 @@ document.body.onload=()=>{
                     'animation': 'myOrbit 4s linear infinite',
                     'top': 'unset'
                     })
-            }else if(window.innerWidth<450){
+            }else if(window.innerWidth<500){
                 $('#rckt1').css({
                     'width': '7.5%',
                     'z-index': '-3',
@@ -61,7 +62,7 @@ document.body.onload=()=>{
             }
         },750)
         setTimeout(()=>{
-            if(window.innerWidth<900 && window.innerWidth>450){
+            if(window.innerWidth<900 && window.innerWidth>500){
                 $('#rckt2').css({
                     'width': '2.5vw',
                     'z-index': '-3',
@@ -76,7 +77,7 @@ document.body.onload=()=>{
                     'top': 'unset',
                     'right':'unset',
                     })
-            }else if(window.innerWidth<450){
+            }else if(window.innerWidth<500){
                 $('#rckt2').css({
                     'width': '8%',
                     'z-index': '-3',
@@ -124,7 +125,7 @@ document.body.onload=()=>{
                         var posx = currTrans.split(',')[4]
                         var posy = currTrans.split(',')[5]
                         if(window.innerWidth<450){
-                            div.setAttribute('style',`top:${$('#fallingStar').css('top')};left:${$('#fallingStar').css('left')};transform:translate(${(parseInt(posx)+(12*vw))}px,${(parseInt(posy)+(23*vw))}px);transition:1s;`)
+                            div.setAttribute('style',`top:${$('#fallingStar').css('top')};left:${$('#fallingStar').css('left')};transform:translate(${(parseInt(posx)+(12*vw))}px,${(parseInt(posy)+(19.2*vw))}px);transition:1s;`)
                         }else{
                             div.setAttribute('style',`top:${$('#fallingStar').css('top')};left:${$('#fallingStar').css('left')};transform:translate(${(parseInt(posx)+(4*vw))}px,${(parseInt(posy)+(6*vw))}px);transition:1s;`)
                         }
