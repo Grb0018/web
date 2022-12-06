@@ -3,6 +3,9 @@
     --font2:  'Lato', sans-serif;
     --font3: 'Rimouski SemiBold'
 }
+html{
+    overflow: hidden;
+}
 @font-face {
     font-family: 'Rimouski SemiBold';
     font-style: normal;
@@ -10,11 +13,14 @@
     src: local('Rimouski SemiBold'), url('rimouski sb.woff') format('woff');
     }
 body{
-    background-color: #01082e;
+    background-color: #030224;
     font-family: var(--font2);
     user-select: none;
     -webkit-user-drag: none;
-    overflow: hidden;
+    overflow: hidden!important;
+    position: absolute;
+    width:100vw;
+    height: 100vh;
 }
 .navbar{
     display: none;
@@ -383,7 +389,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#383755",endCo
 }
 @media (max-width: 450px){
     #fallingStar{
-        width: 1.3vw;
+        width: 1vw;
         box-shadow: 1px 20px 20px 1px #898989;
         position: absolute;
         left: -20vw;
@@ -407,7 +413,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#383755",endCo
         align-items: center;
         justify-content: center;
         width: 70%;
-        height: 33%;
+        height: 70vw;
         border-radius: 50%;
         position: absolute;
         top: 32%;
