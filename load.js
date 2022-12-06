@@ -14,35 +14,100 @@ document.body.onload=()=>{
         $('#rckt1').css('animation','rckt1 1s linear')
         $('#rckt2').css('animation','rckt2 1s linear')
         setTimeout(()=>{
-            $('#rckt1').css({
-                'width': '2.5vw',
-                'z-index': '-3',
-                'rotate': '43deg',
-                'position': 'absolute',
-                'bottom': '28vw',
-                'left': '46vw',
-                'transform-origin': 'center',
-                'transition': '1s',
-                'transform': 'translateY(0vw)',
-                'animation': 'myOrbit 4s linear infinite',
-                'top': 'unset'
-                })
+            if(window.innerWidth<900 && window.innerWidth>450){
+                $('#rckt1').css({
+                    'width': '2.5vw',
+                    'z-index': '-3',
+                    'rotate': '43deg',
+                    'position': 'absolute',
+                    'bottom': '23vw',
+                    'left': '50vw',
+                    'transform-origin': 'center',
+                    'transition': '1s',
+                    'transform': 'translateY(0vw)',
+                    'animation': 'myOrbit 4s linear infinite',
+                    'top': 'unset'
+                    })
+            }else if(window.innerWidth<450){
+                $('#rckt1').css({
+                    'width': '7.5%',
+                    'z-index': '-3',
+                    'rotate': '43deg',
+                    'position': 'absolute',
+                    'bottom': '48%',
+                    'left': '46vw',
+                    'transform-origin': 'center',
+                    'transition': '1s',
+                    'transform': 'translateY(0vw)',
+                    'animation': 'myOrbit 4s linear infinite',
+                    'top': 'unset',
+                    'right':'unset',
+                    })
+            }
+            else{
+                $('#rckt1').css({
+                    'width': '2.5vw',
+                    'z-index': '-3',
+                    'rotate': '43deg',
+                    'position': 'absolute',
+                    'bottom': '28vw',
+                    'left': '46vw',
+                    'transform-origin': 'center',
+                    'transition': '1s',
+                    'transform': 'translateY(0vw)',
+                    'animation': 'myOrbit 4s linear infinite',
+                    'top': 'unset'
+                    })
+            }
         },750)
         setTimeout(()=>{
-            $('#rckt2').css({
-                'width': '2.5vw',
-                'z-index': '-3',
-                'rotate': '43deg',
-                'position': 'absolute',
-                'bottom': '28vw',
-                'left': '46vw',
-                'transform-origin': 'center',
-                'transition': '1s',
-                'transform': 'translateY(0vw)',
-                'animation': 'myOrbit2 4s linear infinite',
-                'top': 'unset',
-                'right':'unset',
-                })
+            if(window.innerWidth<900 && window.innerWidth>450){
+                $('#rckt2').css({
+                    'width': '2.5vw',
+                    'z-index': '-3',
+                    'rotate': '43deg',
+                    'position': 'absolute',
+                    'bottom': '24vw',
+                    'left': '52vw',
+                    'transform-origin': 'center',
+                    'transition': '1s',
+                    'transform': 'translateY(0vw)',
+                    'animation': 'myOrbit2 4s linear infinite',
+                    'top': 'unset',
+                    'right':'unset',
+                    })
+            }else if(window.innerWidth<450){
+                $('#rckt2').css({
+                    'width': '8%',
+                    'z-index': '-3',
+                    'rotate': '43deg',
+                    'position': 'absolute',
+                    'bottom': '50%',
+                    'left': '46vw',
+                    'transform-origin': 'center',
+                    'transition': '1s',
+                    'transform': 'translateY(0vw)',
+                    'animation': 'myOrbit2 4s linear infinite',
+                    'top': 'unset',
+                    'right':'unset',
+                    })
+            }
+            else{
+                $('#rckt2').css({
+                    'width': '2.5vw',
+                    'z-index': '-3',
+                    'rotate': '43deg',
+                    'position': 'absolute',
+                    'bottom': '28vw',
+                    'left': '46vw',
+                    'transform-origin': 'center',
+                    'transition': '1s',
+                    'transform': 'translateY(0vw)',
+                    'animation': 'myOrbit2 4s linear infinite',
+                    'top': 'unset',
+                    'right':'unset',
+                    })
+            }
                 setTimeout(()=>{
                     var img= document.createElement('img');img.src="./img/fallingstar.png";img.setAttribute('alt',"falling star");img.setAttribute('id','fallingStar')
                     img.onload=()=>{
@@ -58,7 +123,12 @@ document.body.onload=()=>{
                         var currTrans = $('#fallingStar').css('-webkit-transform').split(/[()]/)[1];
                         var posx = currTrans.split(',')[4]
                         var posy = currTrans.split(',')[5]
-                        div.setAttribute('style',`top:${$('#fallingStar').css('top')};left:${$('#fallingStar').css('left')};transform:translate(${(parseInt(posx)+(4*vw))}px,${(parseInt(posy)+(6*vw))}px);transition:1s;`)
+                        if(window.innerWidth<450){
+                            div.setAttribute('style',`top:${$('#fallingStar').css('top')};left:${$('#fallingStar').css('left')};transform:translate(${(parseInt(posx)+(12*vw))}px,${(parseInt(posy)+(23*vw))}px);transition:1s;`)
+                        }else{
+                            div.setAttribute('style',`top:${$('#fallingStar').css('top')};left:${$('#fallingStar').css('left')};transform:translate(${(parseInt(posx)+(4*vw))}px,${(parseInt(posy)+(6*vw))}px);transition:1s;`)
+                        }
+                        
                         document.body.append(div)
                         var turnt=Math.floor(Math.random()*2)
                         var count = Math.floor(Math.random()*10)
@@ -78,6 +148,7 @@ document.body.onload=()=>{
                 },1000)
 
         },3250)
+        //////// star create ////////////
     for (let i = 0; i < 100; i++) {
         var div= document.createElement('div')
         div.innerText='*'
